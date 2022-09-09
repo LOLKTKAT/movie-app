@@ -1,0 +1,89 @@
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1220;
+}
+.navbar__links {
+  display: flex;
+  gap: var(--mid-margin);
+}
+.navbar__links h5:hover {
+  color: var(--tertiary);
+  cursor: pointer;
+}
+.hamburger {
+  display: none;
+  position: absolute;
+  right: 0rem;
+  height: 30px;
+}
+.hamburger:hover {
+  cursor: pointer;
+}
+.search-glass {
+  display: none;
+}
+.search-glass:hover {
+  cursor: pointer;
+}
+@media only screen and (max-width: 950px) {
+  .hamburger {
+    display: flex;
+    right: 3vw;
+  }
+  .navbar__links,
+  .navbar__searchbox {
+    display: none;
+  }
+  .show {
+    width: 100%;
+    display: unset;
+    height: 100vh;
+    background-color: var(--gray);
+  }
+  .navbar-container {
+    background-color: rgb(0, 0, 0, 0.85);
+    height: 32px;
+    flex-direction: column;
+    width: 100%;
+    position: fixed;
+    transition: 100ms ease;
+  }
+  .show-navbar__links {
+    text-align: center;
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    transition: 100ms ease-in-out;
+    background-color: var(--gray);
+    height: 100vh;
+  }
+  .show-navbar__links h5 {
+    font-size: 50px;
+  }
+  .show-navbar-container {
+    background-color: var(--gray);
+    height: 100vh;
+  }
+  .navbar__logo {
+    position: absolute;
+    left: 3vw;
+  }
+  .search-glass {
+    display: unset;
+    height: 24px;
+    right: 50px;
+    top: 4px;
+    position: absolute;
+  }
+  .show-navbar__searchbox {
+    position: absolute;
+    right: 15vw;
+    top: 3px;
+  }
+}

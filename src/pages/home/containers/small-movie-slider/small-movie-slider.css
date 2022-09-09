@@ -1,0 +1,20 @@
+.small-slider__container {
+  width: 100%;
+}
+.small-slider__list {
+  overflow-x: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.small-slider__list::-webkit-scrollbar {
+  display: none;
+}
+.small-slider__heading {
+  margin-bottom: var(--mid-margin);
+}
+@media only screen and (max-width: 680px) {
+  /* .small-slider__list {
+    width: 500px;
+  } */
+} ;

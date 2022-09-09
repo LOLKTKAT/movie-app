@@ -1,0 +1,22 @@
+.first-movie-component__poster {
+  border: 1px solid #ffffff33;
+  border-radius: 8px;
+}
+.first-movie-component__info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.first-movie-component__info__discription {
+  display: flex;
+  gap: 10px;
+}
+.first-movie-component__poster {
+  transition: 100ms;
+}
+.first-movie-component__poster:hover {
+  border: 1px solid var(--secondary);
+}
+.first-movie-component__poster:active {
+  border: 1px solid #3e3e3e;
+}

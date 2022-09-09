@@ -1,0 +1,44 @@
+.favourites__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--huge-margin);
+  width: 100%;
+}
+.favourites__component {
+  display: flex;
+  gap: var(--mid-margin);
+}
+.favourites-movie__poster {
+  transition: 100ms;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.favourites-movie__poster:hover {
+  border: 1px solid var(--secondary);
+}
+.favourites-movie__poster:active {
+  border: 1px solid #3e3e3e;
+}
+@media only screen and (max-width: 950px) {
+  .favourites__container {
+    grid-template-columns: 1fr;
+    margin-top: 40px;
+  }
+  .favourites-movie__poster {
+    width: 250px;
+    height: auto;
+  }
+}
+.favourites__vote {
+  display: flex;
+  margin-top: 10px;
+  gap: 10px;
+  align-items: center;
+}
+@media only screen and (max-width: 500px) {
+  .favourites__component {
+    flex-direction: column;
+    gap: var(--mid-margin);
+    align-items: center;
+  }
+}

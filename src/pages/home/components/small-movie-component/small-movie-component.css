@@ -1,0 +1,24 @@
+.small-movie__wrapper {
+  display: flex;
+  gap: calc(var(--mid-margin) + 6px);
+  margin-bottom: var(--mid-margin);
+}
+.small-movie__poster {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  width: 165px;
+}
+.small-movie__info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.small-movie__info__discription {
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 950px) {
+  .small-movie__poster {
+    width: 200px;
+  }
+}

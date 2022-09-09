@@ -1,0 +1,44 @@
+.cta-container {
+  display: flex;
+  margin-bottom: 100px;
+  width: 100%;
+}
+.cta__heading {
+  width: 50vw;
+  margin-bottom: 32px;
+}
+.cta__discription {
+  margin-bottom: 32px;
+}
+
+.cta__image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.cta__image2 {
+  position: absolute;
+  right: 80px;
+  top: 150px;
+}
+.cta__image1 {
+  position: absolute;
+  right: 200px;
+  top: 80px;
+}
+.cta__image3 {
+  position: absolute;
+  right: 320px;
+  top: 130px;
+}
+.cta__image4 {
+  position: absolute;
+  right: 200px;
+  top: 220px;
+  margin-bottom: 100px;
+}
+@media only screen and (max-width: 950px) {
+  .cta-container {
+    margin-top: 24px;
+  }
+}

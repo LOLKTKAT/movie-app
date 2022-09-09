@@ -1,0 +1,14 @@
+.big-movie-slider__component {
+  gap: 1vw;
+}
+.big-movie__poster {
+  height: 266px;
+}
+@media only screen and (max-width: 950px) {
+  .big-movie__poster {
+    height: 180px;
+  }
+  .big-movie-slider__component {
+    gap: var(--mid-margin);
+  }
+}

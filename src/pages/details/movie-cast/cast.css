@@ -1,0 +1,21 @@
+.cast-section {
+  margin-top: var(--big-margin);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.cast-section__cast {
+  display: flex;
+  overflow-x: scroll;
+  gap: var(--big-margin);
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  max-width: 1440px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.cast-section__cast::-webkit-scrollbar {
+  display: none;
+}
