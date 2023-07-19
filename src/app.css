@@ -122,6 +122,11 @@ body {
   pointer-events: none;
 }
 
+a {
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--white);
+}
 @media only screen and (min-device-width: 1200px) and (max-device-width: 1440px) {
   h1 {
     font-size: 64px;
@@ -154,11 +159,6 @@ body {
 
   .Body-text {
     font-size: 18px;
-  }
-  a {
-    font-size: 14px;
-    text-decoration: none;
-    color: var(--white);
   }
 }
 .poster {

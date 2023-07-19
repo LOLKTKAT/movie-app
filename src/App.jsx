@@ -1,23 +1,15 @@
-import React, { useState, useEffect, useContext, Suspense } from "react";
+import React, { useState } from "react";
 import { DEFAULT_GENRES } from "./data/DefaultGenres";
 import "./app.css";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  Routes,
-  useSearchParams,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/home/Home";
 import Details from "./pages/details/Details";
 import Search from "./pages/search/Search";
-import Browse from "./pages/browse/Browse";
 import Favourites from "./pages/favourites/Favourites";
 import { UserContext } from "./data/UserContext";
 import Movies from "./pages/movies/Movies";
+
 function App() {
-  const [movieId, setSetMovieId] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const [searchSubmit, setSearchSubmit] = useState(true);
   const [favourites, setFavourites] = useState([]);
@@ -47,7 +39,6 @@ function App() {
               <Search search={searchQuery} setSearchQuery={setSearchQuery} />
             }
           />
-          <Route path="/browse" exact element={<Browse />} />
           <Route path="/favourites" exact element={<Favourites />} />
           <Route
             path="/movies"

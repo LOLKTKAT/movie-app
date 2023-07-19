@@ -1,14 +1,12 @@
 import React, { useEffect, useState, Suspense, useContext } from "react";
-import { Link } from "react-router-dom";
 import "./search.css";
 import NavBar from "../../components/nav-bar/NavBar";
 import { fetchSearchValue } from "../../data/fetchSearchValue";
 import { StyledBoundry, StyledContainer } from "../../styles";
 import { UserContext } from "../../data/UserContext";
-import altImage from "../../assets/images/altImage.jpg";
-import { fetchMovieDetails } from "../../data/fetchMovieDetails";
 import SearchMovieComponent from "./components/SearchMovieComponent";
 import { StyledNextBtn } from "../../styles";
+import Footer from "../../components/footer/Footer";
 
 const Search = ({ search, setSearch }) => {
   const [searchData, setSearchData] = useState({});
@@ -58,6 +56,7 @@ const Search = ({ search, setSearch }) => {
           </section>
         )}
       </StyledContainer>
+      <Footer />
     </StyledBoundry>
   );
 };

@@ -3,10 +3,10 @@ import "./favourites.css";
 import NavBar from "../../components/nav-bar/NavBar";
 import { StyledBoundry, StyledContainer, StyledButton } from "../../styles";
 import { UserContext } from "../../data/UserContext";
-import { fetchMovieDetails } from "../../data/fetchMovieDetails";
 import altImage from "../../assets/images/altImage.jpg";
 import tmdb_icon from "../../assets/images/tmdb.png";
 import { Link } from "react-router-dom";
+import Footer from "../../components/footer/Footer";
 
 function reducer(state, action) {
   switch (action.type) {
@@ -72,6 +72,7 @@ const Favourites = () => {
           )}
         </StyledContainer>
         <StyledButton onClick={handleDelete}>Delete All</StyledButton>
+        <Footer />
       </StyledBoundry>
     </>
   );

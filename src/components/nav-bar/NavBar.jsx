@@ -1,16 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
 import "./nav-bar.css";
 import { StyledInput, StyledContainer, StyledBoundry } from "../../styles";
-import {
-  NavLink,
-  Link,
-  useNavigate,
-  useSearchParams,
-  useParams,
-} from "react-router-dom";
-import { useSearchInput } from "../../data/useSearchInput";
-import Search from "../../pages/search/Search";
-import { render } from "@testing-library/react";
+import { NavLink, Link, useNavigate, useParams } from "react-router-dom";
+
 import { UserContext } from "../../data/UserContext";
 import Hamburger from "../../assets/images/Hamburger_MD.svg";
 import Search_Glass from "../../assets/images/Search_Magnifying_Glass.svg";
@@ -33,7 +25,6 @@ const NabBar = () => {
   function handleSubmit(e) {
     e.preventDefault();
     setSearchSubmit(!searchSubmit);
-    console.log(searchQuery);
     navigate(`/search/${searchQuery}`);
   }
   return (

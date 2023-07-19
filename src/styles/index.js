@@ -1,4 +1,4 @@
-import styled, { themeProvider } from "styled-components";
+import styled from "styled-components";
 
 export const StyledBoundry = styled.div`
   margin-top: 20px;
@@ -27,17 +27,11 @@ export const StyledInput = styled.input`
   border-radius: 30px;
   border: 1px solid hsl(100, 100%, 100%, 0.4);
   transition: 100ms ease-in-out;
-
   outline: none;
   &:focus {
-    width: 200px;
-    height: 36px;
+    background-color: hsl(100, 100%, 100%, 0.8);
   }
   @media only screen and (max-width: 950px) {
-    width: 140px;
-    height: 24px;
-  }
-  &:focus {
     width: 140px;
     height: 24px;
   }

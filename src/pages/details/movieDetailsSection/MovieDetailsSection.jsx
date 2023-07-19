@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext, useReducer } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { StyledContainer } from "../../../styles";
 import Cast from "../movie-cast/Cast";
 import "./movie-details-section.css";
@@ -6,11 +6,6 @@ import { StyledButton } from "../../../styles";
 import { UserContext } from "../../../data/UserContext";
 import tmdb_icon from "../../../assets/images/tmdb.png";
 
-const initialState = {
-  watched: localStorage.getItem("localStorageFavourites")
-    ? JSON.parse(localStorage.getItem("localStorageFavourites"))
-    : [],
-};
 const MovieDetailsSection = ({ movieDetails, movieCredits }) => {
   const {
     id,
@@ -24,7 +19,6 @@ const MovieDetailsSection = ({ movieDetails, movieCredits }) => {
     status,
     budget,
   } = movieDetails;
-  const [cast, setCast] = useState(movieCredits.cast);
   const [exists, setExists] = useState();
   const [watchedMovie, setWatchedMovie] = useState();
   const x = [];
@@ -48,16 +42,6 @@ const MovieDetailsSection = ({ movieDetails, movieCredits }) => {
       setFavourites(newFavList);
       saveToLocalStorage(newFavList);
     }
-
-    // console.log(localData[0].runtime);
-
-    // if (localData[0].id == id) {
-    //   console.log(true);
-    //   setExists(true);
-    // } else {
-    //   console.log(false);
-    //   setExists(false);
-    // }
   }
 
   function saveToLocalStorage(item) {

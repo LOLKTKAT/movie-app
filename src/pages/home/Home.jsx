@@ -1,5 +1,5 @@
 import React from "react";
-import { StyledBoundry, StyledContainer } from "../../styles";
+import { StyledBoundry } from "../../styles";
 import NavBar from "../../components/nav-bar/NavBar";
 import CTA from "./containers/CTA/CTA";
 import SmallMovieSlider from "./containers/small-movie-slider/SmallMovieSlider";

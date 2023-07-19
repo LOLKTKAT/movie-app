@@ -5,12 +5,7 @@ import "./footer.css";
 const Footer = () => {
   return (
     <StyledContainer className="footer">
-      <div>
-        <div className="logo"></div>
-      </div>
-      <div>
-        <div className="footer__sitemap"></div>
-      </div>
+      <h4>Website made by Maysara Basheer</h4>
     </StyledContainer>
   );
 };
